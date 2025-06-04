@@ -1,0 +1,154 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.8;
+    background: #f9fafb;
+}
+
+section.hero {
+    background: linear-gradient(to right, #0f766e, #1e3a8a);
+    transition: background 0.5s ease;
+}
+
+section img {
+    transition: opacity 0.3s ease;
+}
+
+section img:hover {
+    opacity: 0.5;
+}
+
+nav {
+    transition: background 0.3s ease;
+}
+
+nav ul li a {
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    transform: scale(1.1);
+    color: #1e3a8a;
+}
+
+article section {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+article section:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+h2, h3 {
+    color: #0f766e;
+    transition: color 0.3s ease;
+}
+
+h2:hover, h3:hover {
+    color: #1e3a8a;
+}
+
+a {
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+footer {
+    background: linear-gradient(to right, #0f766e, #1e3a8a);
+}
+
+/* Animations */
+@keyframes fade-in {
+    0% { opacity: 0; transform: scale(0.9); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slide-in {
+    0% { opacity: 0; transform: translateY(40px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fade-in 1.5s ease-out;
+}
+
+.animate-slide-in {
+    animation: slide-in 1.3s ease-out;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    section h1 {
+        font-size: 2.5rem;
+    }
+
+    nav ul {
+        gap: 1.5rem;
+    }
+
+    article section {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    section h1 {
+        font-size: 2rem;
+    }
+
+    section p {
+        font-size: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    article section {
+        padding: 1.25rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    aside {
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    section h1 {
+        font-size: 1.5rem;
+    }
+
+    section p {
+        font-size: 0.9rem;
+    }
+
+    nav ul li a {
+        font-size: 0.95rem;
+    }
+
+    article section {
+        padding: 1rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+    }
+}
